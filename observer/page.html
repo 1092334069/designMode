@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>购买商品</title>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style>
+	body{
+		font-size: 16px;
+	}
+	.btn{
+		padding: 16px;
+		background-color: #138ed4;
+		color: #ffffff;
+		text-align: center;
+		cursor: pointer;
+	}
+	.message{
+		font-size: 14px;
+	}
+	.login{
+		width: 200px;
+		height: 100px;
+		padding: 50px 0;
+		background-color: #f2f2f2;
+		border-radius: 6px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+	.login-btn{
+		margin: 0 24px;
+		border-radius: 4px;
+		height: 36px;
+		line-height: 36px;
+		cursor: pointer;
+		background-color: #138ed4;
+		color: #ffffff;
+	}
+	.hidden{
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<div id="app">
+		<div id="btn" class="btn">购买商品</div>
+		<div id="message"></div>
+		<div id="login" class="login hidden">
+			<p>省去输用户名和密码</p>
+			<div id="loginBtn" class="login-btn">登录</div>
+		</div>
+	</div>
+	<script src="index.js"></script>
+	<script src="page.js"></script>
+</body>
