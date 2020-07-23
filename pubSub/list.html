@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>列表页</title>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style>
+	body{
+		font-size: 16px;
+	}
+	.item{
+		padding: 8px 16px;
+		position: relative;
+		height: 40px;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.title{
+		font-size: 20px;
+	}
+	.status{
+		color: #138ed4;
+		position: absolute;
+		right: 16px;
+		top: 8px;
+	}
+</style>
+</head>
+<body>
+	<div id="app">
+		
+
+	</div>
+	<script src="https://cdn.bootcdn.net/ajax/libs/template_js/0.8.0/template.js"></script>
+	<script type="text/html" id="orderListTemplate">
+		<%for(var i = 0; i < list.length; i++) {%>
+			<div class="item">
+				<a href="detail.html?id=<%:=list[i].id%>" class="title"><%:=list[i].title%></a>
+				<div class="status"><%:=list[i].status%></div>
+			</div>
+		<%}%>
+	</script>
+	<script src="index.js"></script>
+	<script src="list.js"></script>
+</body>
