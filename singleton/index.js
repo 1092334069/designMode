@@ -43,7 +43,11 @@
 
 	var singleton = function() {}
 
-	singleton.prototype.ajax = function(key, option) {
+	singleton.prototype.ajax = function(option) {
+		var key = option.url
+		if (ajaxStorage[key]) {
+			return
+		}
 		ajaxStorage[key] = true
 		var param = {}
 		for (var k in option) {

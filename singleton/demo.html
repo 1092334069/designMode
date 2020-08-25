@@ -42,6 +42,19 @@
 				}
 			})
 		}, 3000)
+	</script>
+	<script>
+		var singletonAjax = Singleton({
+			type: 'ajax'
+		})
+
+		singletonAjax.ajax({
+			url: 'http://aisqueezepage.com:9091/json/shopDetail?productId=1'
+		})
+
+		singletonAjax.ajax({
+			url: 'http://aisqueezepage.com:9091/json/shopDetail?productId=1'
+		})
 
 	</script>
 </body>
