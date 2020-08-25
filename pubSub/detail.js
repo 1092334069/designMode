@@ -15,6 +15,7 @@ var id = getQueryVariable('id')
 var pubSub = PubSub()
 
 $('#btn').click(function() {
+      console.log('已支付：')
 	console.log(id)
 	pubSub.push('orderStatus', {
 		id: Number(id),

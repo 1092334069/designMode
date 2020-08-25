@@ -6,7 +6,7 @@
 *	}
 */
 
-(fuction() {
+(function() {
 
 	var ajaxStorage = {}
 	var timeoutStorage = {}
@@ -43,14 +43,6 @@
 
 	var singleton = function() {}
 
-	singleton.prototype.init = function(option) {
-		if (option.type === 'ajax') {
-			this.ajax(option.key, option.param)
-		} else if (option.type === 'timeout') {
-			this.timeout(option.key, option.param)
-		}
-	}
-
 	singleton.prototype.ajax = function(key, option) {
 		ajaxStorage[key] = true
 		var param = {}
@@ -75,17 +67,7 @@
 	}
 
 	window.Singleton = function(option) {
-		if (!option['type'] || !option['key'] || !option['action']) {
-			return
-		}
-		if (option.type === 'ajax' && ajaxStorage[option.key]) {
-			return
-		}
-		if (option.type === 'timeout' && timeoutStorage[option.key]) {
-			return
-		}
 		var p = new singleton()
-		p.init(option)
 		return p
 	}
 
